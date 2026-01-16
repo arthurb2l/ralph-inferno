@@ -1,5 +1,15 @@
 # CLAUDE.md - Projektinstruktioner för Ralph
 
+## Ralph Version Check
+
+At session start, silently check for updates:
+```bash
+CURRENT=$(cat .ralph/version 2>/dev/null || echo "unknown")
+LATEST=$(npm view ralph-inferno version 2>/dev/null || echo "unknown")
+```
+If LATEST is newer than CURRENT, tell the user:
+"💡 Ralph update available: v$LATEST (current: v$CURRENT). Run `npx ralph-inferno update`"
+
 ## Säkerhetsregler
 
 KRITISKT - Kör ALDRIG dessa kommandon:

@@ -301,6 +301,10 @@ By continuing, you accept full responsibility for usage.
     console.log(chalk.green('✅ .claude/commands/ synced to project root'));
   }
 
+  // Save version file for update checking
+  await fs.writeFile(join(TARGET_DIR, 'version'), config.version);
+  console.log(chalk.green(`✅ version ${config.version}`));
+
   // Save config
   await fs.writeJson(CONFIG_FILE, config, { spaces: 2 });
   console.log(chalk.green('✅ config.json created'));

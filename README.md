@@ -36,6 +36,7 @@ AI-driven autonomous development workflow.
   - Claude subscription (requires `claude login` on the VM)
 
 **Optional:**
+- **Claude Chrome Extension** - For best results in `/ralph:discover`, lets Claude browse websites you reference
 - Cloud CLI (`hcloud`, `gcloud`, `doctl`, `aws`) for VM management
 - [ntfy.sh](https://ntfy.sh) for notifications
 
@@ -131,6 +132,12 @@ When running `/ralph:deploy`, you choose a mode:
 | **Standard** | + Playwright E2E tests + auto-CR generation |
 | **Inferno** | + Design review + parallel worktrees |
 
+### Tips for Best Results
+
+**Discovery mode works best when Claude can browse the web.**
+
+Install the **Claude Chrome Extension** - it lets Claude see and interact with websites you reference during `/ralph:discover`. This enables better research of competitors, APIs, and documentation.
+
 ### Example Session
 
 ```bash
@@ -176,7 +183,7 @@ Configuration is stored in `.ralph/config.json`:
 
 ```json
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "language": "en",
   "provider": "hcloud",
   "vm_name": "ralph-sandbox",
