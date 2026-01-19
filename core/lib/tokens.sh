@@ -59,11 +59,10 @@ estimate_spec_complexity() {
 # COST TRACKING
 # =============================================================================
 
-# Pricing per 1M tokens (as of 2024)
-# Claude 3.5 Sonnet: $3/1M input, $15/1M output
-# Claude 3 Opus: $15/1M input, $75/1M output
-INPUT_COST_PER_M=${INPUT_COST_PER_M:-3}    # Sonnet default
-OUTPUT_COST_PER_M=${OUTPUT_COST_PER_M:-15}
+# Pricing per 1M tokens (configure for your Claude/Codex model)
+# Defaults are placeholders; override via env vars.
+INPUT_COST_PER_M=${INPUT_COST_PER_M:-0}
+OUTPUT_COST_PER_M=${OUTPUT_COST_PER_M:-0}
 
 # Estimate cost from tokens
 estimate_cost() {
@@ -116,5 +115,9 @@ print_cost_summary() {
     fi
 
     echo ""
-    echo "(Based on Claude 3.5 Sonnet pricing)"
+    if [ "$INPUT_COST_PER_M" -eq 0 ] && [ "$OUTPUT_COST_PER_M" -eq 0 ]; then
+        echo "(Set INPUT_COST_PER_M and OUTPUT_COST_PER_M to enable cost estimates)"
+    else
+        echo "(Based on configured pricing)"
+    fi
 }
