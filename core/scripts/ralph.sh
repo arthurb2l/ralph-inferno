@@ -286,8 +286,8 @@ main() {
     local total_specs=$(ls -1 specs/*.md 2>/dev/null | grep -v "/CR-" | wc -l | tr -d ' ')
 
     if [ "$total_specs" -eq 0 ]; then
-        log "${RED}Inga specs hittades i specs/*.md${NC}"
-        notify "❌ Inga specs hittades"
+        log "${RED}No specs found i specs/*.md${NC}"
+        notify "❌ No specs found"
         exit 1
     fi
 

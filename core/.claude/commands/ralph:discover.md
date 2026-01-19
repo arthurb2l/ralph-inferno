@@ -9,6 +9,18 @@ Start an interactive discovery session to create a PRD and set up the project.
 /ralph:discover my-app --input meeting-notes.md
 ```
 
+## LANGUAGE SETTING
+
+**FIRST: Check language setting**
+```bash
+cat .ralph/config.json | grep language
+```
+
+Use the configured language for ALL output (PRD, questions, comments).
+- `"language": "en"` → Write everything in English
+- `"language": "sv"` → Write everything in Swedish
+- etc.
+
 ## CRITICAL INSTRUCTIONS
 
 **NUMBERED CHOICES FORMAT - MANDATORY:**
