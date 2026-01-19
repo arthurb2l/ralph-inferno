@@ -2,6 +2,17 @@
 
 All notable changes to Ralph Inferno will be documented in this file.
 
+## [1.0.8] - 2025-01-19
+
+### Added
+- **config-utils.sh**: Centralized config loading (`load_config`, `get_language`, etc.)
+- All slash commands now auto-detect language setting
+
+### Fixed
+- **ntfy notifications**: Now respects `ntfy_enabled` setting in config.json
+- **VM config**: `ralph:review` reads from config.json instead of `~/.ralph-vm`
+- Consistent config loading across all scripts
+
 ## [1.0.7] - 2025-01-19
 
 ### Added
