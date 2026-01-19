@@ -306,6 +306,7 @@ Configuration is stored in `.ralph/config.json`:
 Ralph Inferno builds on ideas from:
 
 - [snarktank/ralph](https://github.com/snarktank/ralph) - Ryan Carson's original Ralph concept
+- [BMAD Method](https://github.com/bmadcode/BMAD-METHOD) - The discovery workflow (`/ralph:idea` and `/ralph:discover`) is heavily inspired by BMAD's Brainstorm and Analyst personas
 - [how-to-build-a-coding-agent](https://github.com/ghuntley/how-to-build-a-coding-agent) - Geoffrey Huntley's agent patterns
 - [claude-ralph](https://github.com/RobinOppenstam/claude-ralph) - Robin Oppenstam's implementation
 
