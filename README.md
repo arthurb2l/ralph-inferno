@@ -20,6 +20,11 @@
 
 AI-driven autonomous development workflow.
 
+> **Note:** This repository is a copy of [sandstream/ralph-inferno](https://github.com/sandstream/ralph-inferno) for learning and testing purposes.
+>
+> **Related Projects:**
+> - [pedramamini/Maestro](https://github.com/pedramamini/Maestro/) - Another autonomous AI development workflow implementation
+
 ## How It Works
 
 Ralph installs as **Claude Code commands** and **Codex CLI prompts**. When you run `npx ralph-inferno install`, it creates a `.ralph/` folder with scripts, syncs `.claude/commands/` for Claude Code, and syncs `~/.codex/prompts/` for Codex CLI.
